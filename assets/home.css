@@ -17,7 +17,6 @@ aside{
 .navbar-list li{
     padding: 0px 5px;
 }
-
 @media (min-width: 992px) {
   .navbar-list li:hover {
     border-radius: 18px;

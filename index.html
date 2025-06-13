@@ -127,11 +127,32 @@
                 <div class="p-3">
                     <div class="d-flex justify-content-between mb-3">
                         <h1 class="fs-3">Newest Questions</h1>
-                        <a href="#" class="btn btn-primary p-2" style="font-size: 13px;">Ask Question</a>
+                        <button class="btn btn-primary" id="ask-btn-form" style="font-size: 13px;">Ask Question</button>
                     </div>
+
                     <div>
-                        <div id="quantity-question">question</div>
+                        <div id="quantity-questions">question</div>
                     </div>
+
+                    <form class="border p-3 mt-3 d-none rounded-3 border-primary" id="ask-question-form" autocomplete="off">
+                        <label for="form-title">Tiêu đề</label>
+                        <input type="text" class="form-control mb-3" id="form-title"
+                            placeholder="Enter your question title" required>
+
+                        <label for="form-decription">Mô tả</label>
+                        <input type="text" class="form-control mb-2" id="form-decription"
+                            placeholder="Enter your question decription" required>
+
+                        <label for="form-tags">Tag</label>
+                        <input type="text" class="form-control mb-2" id="form-tags"
+                            placeholder="Nhập các tag bắt đầu bằng dấu #">
+
+                        <div class="text-end">
+                            <button class="btn btn-secondary me-2" type="reset"
+                                id="cancel-btn">Hủy</button>
+                            <button class="btn btn-primary" type="submit">Gửi</button>
+                        </div>
+                    </form>
                 </div>
                 <div id="question-list" class="p-0">
                     <!-- Các bài viết -->
@@ -276,21 +297,6 @@
             </div>
         </div>
     </footer>
-
-
-    <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
-        <div id="myToast" class="toast align-items-center text-white bg-danger border-0" role="alert"
-            aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="3000">
-            <div class="d-flex">
-                <div class="toast-body">
-                    Tính năng này hiện chưa được kích hoạt!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                    aria-label="Close"></button>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="assets/home.js"></script>

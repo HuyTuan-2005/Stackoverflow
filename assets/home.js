@@ -155,29 +155,68 @@ function renderQuestion(data) {
                                     </div>
                                 </div>
                             </div>`;
-  return question.appendChild(questionItem);
+  return question.prepend(questionItem);
 }
 
 // Gọi hàm renderQuestion với dữ liệu mẫu
-questionData.forEach((element) => {
+questionData.reverse().forEach((element) => {
   renderQuestion(element);
+  countQuestions();
 });
 
 // đếm số lượng câu hỏi
-const questionCount = document.getElementById("quantity-question");
-questionCount.innerText = questionData.length + " questions";
+function countQuestions() {
+  const questionList = document.querySelectorAll(".question-card");
+  const countElement = document.getElementById("quantity-questions");
+  countElement.textContent = questionList.length + " questions";
+}
+
+// Hiển thị form
+function showForm() {
+  document.getElementById("ask-question-form").classList.remove("d-none");
+  document.getElementById("ask-question-form").classList.toggle("d-block");
+}
+
+// Ẩn form
+function hideForm() {
+  document.getElementById("ask-question-form").classList.remove("d-block");
+  document.getElementById("ask-question-form").classList.toggle("d-none");
+}
 
 
-// Tạo toast Bootstrap khi click vào link href="#"
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", function (e) {
-    if (this.getAttribute("href") === "#") {
-      e.preventDefault();
-      const toastElement = document.getElementById("myToast");
-      const toast = new bootstrap.Toast(toastElement);
-      toast.show();
-    }
-  });
+// Hiển thị form hỏi câu hỏi khi click vào nút "Ask a question"
+document.getElementById("ask-btn-form").addEventListener("click", function () {
+  document.getElementById("ask-btn-form").classList.add("d-none");
+  showForm();
 });
 
+// Ẩn form hỏi câu hỏi khi click vào nút "Cancel"
+document.getElementById("cancel-btn").addEventListener("click", function () {
+  document.getElementById("ask-btn-form").classList.remove("d-none");
+  hideForm();
+});
 
+// Xử lý sự kiện khi gửi form hỏi câu hỏi
+document.getElementById("ask-question-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const title = document.getElementById("form-title").value.trim();
+  const description = document.getElementById("form-decription").value.trim();
+
+  const question =
+  { 
+    title: title,
+    description: description,
+    tags: ["CSS", "Hover", "Transitions"],
+    author: "User",
+    time: "1 giây trước",
+    votes: 0,
+    answers: 0,
+    views: 0,
+
+  }
+
+  hideForm();
+  renderQuestion(question);
+  countQuestions();
+});

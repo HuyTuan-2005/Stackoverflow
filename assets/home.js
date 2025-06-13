@@ -163,6 +163,10 @@ questionData.forEach((element) => {
   renderQuestion(element);
 });
 
+// đếm số lượng câu hỏi
+const questionCount = document.getElementById("quantity-question");
+questionCount.innerText = questionData.length + " questions";
+
 
 // Tạo toast Bootstrap khi click vào link href="#"
 document.querySelectorAll("a").forEach(link => {
@@ -175,3 +179,5 @@ document.querySelectorAll("a").forEach(link => {
     }
   });
 });
+
+

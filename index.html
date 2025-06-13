@@ -64,12 +64,15 @@
                         <button class="border-end-0" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
-                        <input class="form-control border-start-0" style="height: 33.1px;" id="search-input" type="search" name="search" placeholder="Tìm kiếm...">
+                        <input class="form-control border-start-0" style="height: 33.1px;" id="search-input"
+                            type="search" name="search" placeholder="Tìm kiếm...">
                     </div>
                 </form>
                 <div class="d-flex gap-2 mx-2 me-sm-0">
-                    <a id = "loginBtn" class="btn btn-outline-primary" style="width: 80px;font-size: 13px;" href="login/login.html">Login</a>
-                    <a id = "signupBtn" class="btn btn-primary" style="width: 80px;font-size: 13px;" href="login/sign_up.html">Sign up</a>
+                    <a id="loginBtn" class="btn btn-outline-primary" style="width: 80px;font-size: 13px;"
+                        href="login/login.html">Login</a>
+                    <a id="signupBtn" class="btn btn-primary" style="width: 80px;font-size: 13px;"
+                        href="login/sign_up.html">Sign up</a>
                 </div>
             </div>
         </nav>
@@ -120,15 +123,18 @@
                 </div>
             </aside>
 
-            <main class="col-12 col-lg-7">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-between my-3 py-0">
-                        <h2>Recently Active Questions</h2>
-
+            <main class="col-12 col-lg-7 px-0">
+                <div class="p-3">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h1 class="fs-3">Newest Questions</h1>
+                        <a href="#" class="btn btn-primary p-2" style="font-size: 13px;">Ask Question</a>
                     </div>
-                    <div id="question-list" class="p-0">
-                        <!-- Các bài viết -->
+                    <div>
+                        <div id="quantity-question">question</div>
                     </div>
+                </div>
+                <div id="question-list" class="p-0">
+                    <!-- Các bài viết -->
                 </div>
 
             </main>

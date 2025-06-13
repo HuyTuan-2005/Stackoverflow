@@ -181,6 +181,7 @@ function showForm() {
 function hideForm() {
   document.getElementById("ask-question-form").classList.remove("d-block");
   document.getElementById("ask-question-form").classList.toggle("d-none");
+  document.getElementById("ask-btn-form").classList.remove("d-none");
 }
 
 
@@ -192,9 +193,16 @@ document.getElementById("ask-btn-form").addEventListener("click", function () {
 
 // Ẩn form hỏi câu hỏi khi click vào nút "Cancel"
 document.getElementById("cancel-btn").addEventListener("click", function () {
-  document.getElementById("ask-btn-form").classList.remove("d-none");
   hideForm();
 });
+
+// Hàm để phân tích chuỗi và trả về mảng các thẻ tag
+function parseTags(inputString) {
+  return inputString
+    .split("#")
+    .filter(tag => tag !== "")
+    .map(tag => tag.trim().toLowerCase());
+}
 
 // Xử lý sự kiện khi gửi form hỏi câu hỏi
 document.getElementById("ask-question-form").addEventListener("submit", function (e) {
@@ -202,12 +210,13 @@ document.getElementById("ask-question-form").addEventListener("submit", function
 
   const title = document.getElementById("form-title").value.trim();
   const description = document.getElementById("form-decription").value.trim();
+  const tagsInput = document.getElementById("form-tags").value.trim();
 
   const question =
   { 
     title: title,
     description: description,
-    tags: ["CSS", "Hover", "Transitions"],
+    tags: parseTags(tagsInput),
     author: "User",
     time: "1 giây trước",
     votes: 0,
@@ -216,6 +225,7 @@ document.getElementById("ask-question-form").addEventListener("submit", function
 
   }
 
+  e.target.reset(); 
   hideForm();
   renderQuestion(question);
   countQuestions();

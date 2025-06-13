@@ -170,8 +170,8 @@ document.querySelectorAll("a").forEach(link => {
     if (this.getAttribute("href") === "#") {
       e.preventDefault();
       const toastElement = document.getElementById("myToast");
-      const toast = new bootstrap.Toast(toastElement); // tạo đối tượng Toast
-      toast.show(); // hiển thị
+      const toast = new bootstrap.Toast(toastElement);
+      toast.show();
     }
   });
 });

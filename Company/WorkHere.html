@@ -14,19 +14,40 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .navbar-list li a{
+        .navbar-list li a {
             text-decoration: none;
             color: black;
             padding-right: 50px;
         }
+
         .effect-footer a:hover {
             color: yellow;
+        }
+
+        .footer-links div ul li a,
+        .footer-links div h5 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer-links div ul li a:hover,
+        .footer-links div h5 a:hover {
+            color: #1b75d0;
+            text-decoration: underline;
+        }
+
+        .footer-meta a {
+            color: black;
+        }
+
+        .footer-meta .footer-meta-icon ul li a i:hover {
+            color: #1b75d0;
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header class="border border-bottom d-flex align-items-center" style="height: 90px;">
         <nav class="d-flex justify-content-between container align-items-center">
             <div>
                 <ul class="list-unstyled navbar navbar-list my-0">
@@ -42,38 +63,69 @@
                 </ul>
             </div>
             <div class="navbar">
-                <div class="pe-5">
+                <div class="pe-3">
                     Follow us
                 </div>
-                <button class="btn btn-primary" style="padding:15px; border-radius: 10px;" type="button">Contact</button>
+                <button class="btn btn-primary shadow" type="button">Contact</button>
             </div>
         </nav>
     </header>
     <div class="container">
-        <div class="text-center">
-            <div>
+        <div class="text-center" style="padding: 150px 0px;">
+            <div class="text-muted fs-5">
                 Open positions
             </div>
-            <div>
-                <h1>Careers at Stack Overflow</h1>
-            </div>
-            <div>
+
+            <h1 class="fw-bold" style="font-size: 55px;">Careers at Stack Overflow</h1>
+            <div class="fs-5" style="max-width: 500px; margin: 0 auto;">
                 Join us and help empower the world to develop technology through collective knowledge.
             </div>
-            <div>
-                <form>
-
-                </form>
-            </div>
         </div>
-        <div>
-            <div class="row d-flex">
-                <div class="col-5">
+        <form class=" rounded-3 p-4 mb-5" style="background-color: #f9fafa;">
+            <div class="d-flex align-items-center">
+                <select class="form-select me-3" aria-label="Default select example">
+                    <option selected>All locations</option>
+                    <option value="1">US - Remote</option>
+                    <option value="2">US - Onsite</option>
+                    <option value="3">PH - Remote</option>
+                    <option value="4">PH - Onsite</option>
+                </select>
+                <select class="form-select me-3" aria-label="Default select example">
+                    <option selected>All departments</option>
+                    <option value="1">Engineering</option>
+                    <option value="2">Product</option>
+                    <option value="3">Design</option>
+                    <option value="4">Marketing</option>
+                    <option value="5">Sales</option>
+                    <option value="6">Customer Support</option>
+                </select>
+                <div class="input-group">
+                    <input type="text" class="form-control " placeholder="Search by job title or keyword">
+                </div>
+            </div>
+        </form>
+
+        <section>
+            <div class="d-flex justify-content-evenly">
+                <div style="width: 400px;">
                     <a class="text-decoration-none" href="#"
                         style="text-transform: uppercase; font-weight: bold;">Revenue Operations</a>
                     <p>
                         Collaborate with internal stakeholders to renew and grow business in our existing client base.
                     </p>
+                </div>
+                <div>
+                    <a class="text-decoration-none" style="font-weight: bold;" href="#">SelesForce Aminstrator /
+                        Developer</a>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="pe-3">US-Remote</span><span>PH26011</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-evenly">
+                <div style="width: 400px;">
                     <a class="text-decoration-none" style="font-weight: bold;" href="#">SALES</a>
                     <p>
                         Driving revenue for all lines of business, our sales team members sustain and power Stack
@@ -82,171 +134,135 @@
                         organizations.
                     </p>
                 </div>
-                <div class="col-5">
-                    <a class="text-decoration-none" style="font-weight: bold;" href="#">SelesForce Aminstrator /
-                        Developer</a>
-                    <p>US-Remote PH26011</p>
-                    <a class="text-decoration-none" style="font-weight: bold;" href="#">Senior Sales Engineer, Team</a>
-                    <p>US-Remote PH26011</p>
-                    <a class="text-decoration-none" style="font-weight: bold;" href="#">Technical Sales Enablement
-                        Maneger</a>
-                    <p>US-Remote PH26011</p>
-                </div>
-                <div class="row d-flex">
+                <div>
                     <div>
-                        <i class="bi bi-hand-index-thumb"></i>
-                    </div>
-                    <div class="d-flex">
-                        <div class="fs-1 p-3 my-0">
-                            <i class="fa-solid fa-hands-clapping"></i>
-                        </div>
+                        <a class="text-decoration-none" style="font-weight: bold;" href="#">SelesForce Aminstrator /
+                            Developer</a>
                         <div>
-                            <p>
-                                Stack Overflow does not discriminate in employment matters on the basis of race, color,
-                                religion, gender, national origin, age, military service eligibility, veteran status,
-                                sexual
-                                orientation, marital status, disability, or any other protected class. We support
-                                workplace
-                                diversity.
-                            </p>
-                            <a class="text-decoration-none" href="#">
-                                Read our Applicant and Candidate Privacy Notice
-                            </a>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pe-3">US - Remote</span><span>RH25076</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="text-decoration-none" style="font-weight: bold;" href="#">SelesForce Aminstrator /
+                            Developer</a>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pe-3">US - Remote</span><span>PH26006</span>
                         </div>
                     </div>
                 </div>
-                <div style="background-color: #99FFFF; padding: 30px 0;" class="text-center">
-                    <h3>Life at Stack Overflow</h3>
-                    <p>
-                        Learn more about our core values, benefits, and commitment to diversity, equity, and inclusion.
-                    </p>
-                    <button class="btn btn-primary">Learn more</button>
-                </div>
-
             </div>
-
+        </section>
+        <div class="d-flex w-75">
+            <div class="fs-1 p-3 my-0">
+                <i class="fa-solid fa-hands-clapping"></i>
+            </div>
+            <div>
+                <p>
+                    Stack Overflow does not discriminate in employment matters on the basis of race, color,
+                    religion, gender, national origin, age, military service eligibility, veteran status,
+                    sexual
+                    orientation, marital status, disability, or any other protected class. We support
+                    workplace
+                    diversity.
+                </p>
+                <a class="text-decoration-none" href="#">
+                    Read our Applicant and Candidate Privacy Notice
+                </a>
+            </div>
         </div>
 
     </div>
-    <footer class="container effect-footer">
-        <div class="d-flex justify-content-between">
+    <div style="background-color: #edf5fd; padding: 70px 0px;" class="text-center mt-2">
+        <h3>Life at Stack Overflow</h3>
+        <p>
+            Learn more about our core values, benefits, and commitment to diversity, equity, and inclusion.
+        </p>
+        <button class="btn btn-primary px-3 py-2 fw-bold" style="font-size: 14px; ">Learn more</button>
+    </div>
+    <footer class="container pt-5 px-0">
+        <div class="d-flex justify-content-between p-0 mb-4">
             <div>
                 <a class="d-none d-md-inline-block" href="#">
                     <img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.svg"
-                        alt="logo-stackoverflow" height="30px" class="d-inline-block">
+                        alt="logo-stackoverflow" height="35px" class="d-inline-block">
                 </a>
             </div>
-            <div>
-                <button style="border-radius: 20px; color: white; background-color: greenyellow;"
-                    type="button">Light</button>
-                <button style="border-radius: 20px;" type="button">Dark</button>
-                <button style="border-radius: 20px;" type="button">Auto</button>
+            <div class="bg-secondary bg-opacity-25 rounded-5">
+                <button class="btn btn-success rounded-5" type="button">Light</button>
+                <button class="btn rounded-5" type="button">Dark</button>
+                <button class="btn rounded-5" type="button">Auto</button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-5">
-                <h5>Stack Overflow for Teams</h5>
+        <div class="row footer-links mb-4">
+            <div class="col">
+                <h5 class="pt-4 border-top border-1 border-danger me-5"><a href="#">Stack Overflow for Teams</a></h5>
                 <div class="d-flex">
-                    <div>
-                        <ul class="list-unstyled">
-                            <li class="pt-3"><a class="text-decoration-none  " href="#">Pricing</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Customers</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Our solution</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Integrations</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Features</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Customer Success</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Security</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Return on Investment (ROI)</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="list-unstyled ps-5">
-                            <li class="pt-3"><a class="text-decoration-none text-muted" href="#">Use cases</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Engineers</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Data Scientist</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">DevOps & SRE</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Support</a></li>
-                            <li class="pt-2"><a class="text-decoration-none  " href="#">Product Management</a></li>
-                            <li class="pt-2"><a class="text-decoration-none text-muted" href="#">Resources</a></li>
-                        </ul>
-                    </div>
+                    <ul class="list-unstyled">
+                        <li class="pt-3"><a href="#">Pricing</a></li>
+                        <li class="pt-2"><a href="#">Customers</a></li>
+                        <li class="pt-2"><a href="#">Our solution</a></li>
+                        <li class="pt-2"><a href="#">Integrations</a></li>
+                        <li class="pt-2"><a href="#">Features</a></li>
+                        <li class="pt-2"><a href="#">Customer Success</a></li>
+                        <li class="pt-2"><a href="#">Security</a></li>
+                        <li class="pt-2"><a href="#">Return on Investment (ROI)</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-4">
-                <h5>Stack Overflow Advertising </h5>
+            <div class="col">
+                <h5 class="pt-4 border-top border-1 border-primary me-5"><a href="#">Stack Overflow Advertising</a></h5>
                 <div class="d-flex">
-                    <div>
-                        <ul class="list-unstyled">
-                            <li class="pt-3"><a class="text-decoration-none  " href="#">Why Stack Overflow?</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">What to expect?</a></li>
-                            <li class="pt-3"><a class="text-decoration-none  " href="#">Edvertise to Developers</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Attract tech talent</a></li>
-                            <li class="pt-3"><a class="text-decoration-none  " href="#">Post a job</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Powered by indeep</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="list-unstyled ps-5">
-                            <li class="pt-3"><a class="text-decoration-none text-muted" href="#">Use cases</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Marketing Teams</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Employer Branding Teams</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">DevRel Teams</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Talent Teams</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Technology Teams</a></li>
-                            <li class="pt-1"><a class="text-decoration-none  " href="#">Agenciess</a></li>
-                        </ul>
-                    </div>
+                    <ul class="list-unstyled">
+                        <li class="pt-3"><a href="#">Why Stack Overflow?</a></li>
+                        <li class="pt-1"><a href="#">What to expect?</a></li>
+                        <li class="pt-3"><a href="#">Edvertise to Developers</a></li>
+                        <li class="pt-1"><a href="#">Attract tech talent</a></li>
+                        <li class="pt-3"><a href="#">Post a job</a></li>
+                        <li class="pt-1"><a href="#">Powered by indeep</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-3">
-                <h5>Company</h5>
+            <div class="col">
+                <h5 class="pt-4 border-top border-1 border-secondary me-5"><a href="#">Company</a></h5>
                 <ul class="list-unstyled pt-3">
-                    <li><a class="text-decoration-none " href="#"> Knowledge Solutions </a></li>
-                    <li><a class="text-decoration-none  " href="#"> Data licensing offering to build and improve AI
-                            tools
-                            and models. </a></li>
-                    <li><a class="text-decoration-none " href="#">About</a></li>
-                    <li><a class="text-decoration-none " href="#">Leadership</a></li>
-                    <li><a class="text-decoration-none " href="#">Social Impact</a></li>
-                    <li><a class="text-decoration-none " href="#">Press</a></li>
-                    <li><a class="text-decoration-none " href="#">Careers</a></li>
-                    <li><a class="text-decoration-none  " href="#">Open positions</a></li>
-                    <li><a class="text-decoration-none  " href="#">Contact us</a></li>
-                    <li><a class="text-decoration-none  " href="#">Partnerships</a></li>
-                    <li><a class="text-decoration-none  " href="#">Blog</a></li>
-                    <li><a class="text-decoration-none  " href="#">Newsletter</a></li>
-                    <li><a class="text-decoration-none  " href="#">Podcast</a></li>
-                    <li><a class="text-decoration-none  " href="#">Labs</a></li>
-                    <li><a class="text-decoration-none  " href="#">Annual Developer Survey</a></li>
+                    <li><a href="#"> Knowledge Solutions </a></li>
+                    <li><a href="#"> Data licensing offering to build and improve AI tools and models.</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Social Impact</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Open positions</a></li>
+                    <li><a href="#">Contact us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <p>
-                    Site design / logo © 2025 Stack Exchange Inc.
-                </p>
-                <p>
-                    User contributions licensed under CC BY-SA.
+        <div class="d-flex justify-content-between p-0 m-0 border-top footer-meta">
+            <div class="pt-3">
+                <p style="max-width: 300px; font-size: 13px;" class="text-muted">
+                    Trường Đai học Công Thương Thành phố Hồ Chí Minh
+                    Diễn đàn công nghệ.
                 </p>
             </div>
-            <div class="col-7">
+            <div class="pt-3">
                 <ul class="list-unstyled d-flex">
-                    <li class="pe-3"><a class="text-decoration-none  " href="#">Terms</a></li>
-                    <li class="pe-3"><a class="text-decoration-none  " href="#">Privacy Policy</a></li>
-                    <li class="pe-3"><a class="text-decoration-none  " href="#">Cookie Policy</a></li>
-                    <li class="pe-3"><a class="text-decoration-none  " href="#">Your Privacy Choices</a></li>
-                    <li class="pe-3"><a class="text-decoration-none  " href="#">Go to stackoverflow.com</a></li>
+                    <li class="pe-3"><a class="text-decoration-none" href="#">Terms</a></li>
+                    <li class="pe-3"><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+                    <li class="pe-3"><a class="text-decoration-none" href="#">Cookie Policy</a></li>
+                    <li class="pe-3"><a class="text-decoration-none" href="#">Your Privacy Choices</a></li>
+                    <li class="pe-3"><a class="text-decoration-none" href="#">Go to stackoverflow.com</a></li>
                 </ul>
             </div>
-            <div class="col-1">
+            <div class="pt-3 footer-meta-icon">
                 <ul class="list-unstyled d-flex">
                     <li class="pe-3"><a href="#"></a></li>
-                    <li class="pe-3"><a href="#"><i class="fa-brands fa-twitter  "></i></a></li>
-                    <li class="pe-3"><a href="#"><i class="fa-brands fa-threads  "></i></a></li>
-                    <li class="pe-3"><a href="#"><i class="fa-brands fa-instagram  "></i></a></li>
-                    <li class="pe-3"><a href="#"><i class="fa-brands fa-youtube  "></i></a></li>
+                    <li class="pe-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="pe-3"><a href="#"><i class="fa-brands fa-threads"></i></a></li>
+                    <li class="pe-3"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="pe-3"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
         </div>

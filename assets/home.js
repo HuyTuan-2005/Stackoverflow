@@ -131,7 +131,7 @@ function renderQuestion(data) {
                                 </div>
 
                                 <!-- Thẻ tag + Tác giả  -->
-                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-1">
+                                <div class="justify-content-between align-items-center flex-wrap gap-2 mb-1 d-block d-md-flex">
                                     <!-- tag -->
                                     <ul class="tag-list d-flex flex-nowrap gap-1 list-unstyled">
                                         ${data.tags
@@ -142,7 +142,7 @@ function renderQuestion(data) {
                                           .join("")}
                                     </ul>
                                     <!-- Tác giả và thời gian -->
-                                    <div class="article-info text-muted me-4">
+                                    <div class="article-info text-muted me-4 mt-2 mt-md-0">
                                         <a href="#">
                                             <i class="fa fa-user me-1"></i>
                                             <span class="text-primary">${

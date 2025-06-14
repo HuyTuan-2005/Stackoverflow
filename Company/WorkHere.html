@@ -17,7 +17,7 @@
         .navbar-list li a {
             text-decoration: none;
             color: black;
-            padding-right: 50px;
+            
         }
 
         .effect-footer a:hover {
@@ -43,6 +43,52 @@
         .footer-meta .footer-meta-icon ul li a i:hover {
             color: #1b75d0;
         }
+        .menu:hover{
+            background-color: #c8d2dbec;
+            padding: 10px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        /* 1. Ẩn menu con mặc định */
+        .dropdown {
+            display: none;
+            list-style: none;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            
+        }
+        /* 2. Hiện khi hover */
+        .menu:hover .dropdown {
+            display: block;
+            padding-top: 30px;
+            border: 1px;
+
+        }
+        /* 4. Kiểu mục trong dropdown */
+        .dropdown li a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+            width: 180px;
+        }
+        .dropdown li a:hover{
+            background-color: orangered;
+            color:  white;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px 10px;
+            
+        }
+        .parents{
+            margin-right: 20px;
+            padding: 20px 20px  20px 20px;
+        }
+        .parents:hover{
+            background-color: #c8d2dbec;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -51,20 +97,25 @@
         <nav class="d-flex justify-content-between container align-items-center">
             <div>
                 <ul class="list-unstyled navbar navbar-list my-0">
-                    <li> <a class="d-none d-md-inline-block" href="../index.html">
+                    <li > <a class="d-none d-md-inline-block" href="../index.html">
                             <img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.svg"
                                 alt="logo-stackoverflow" height="30px" class="d-inline-block">
                         </a></li>
-                    <li><a href="#">Our products</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Leadership</a></li>
-                    <li><a href="#">Social Impact</a></li>
+                    <li><a class="parents" href="#">Our products</a></li>
+                    <li><a class="parents" href="#">Careers</a></li>
+                    <li><a class="parents" href="#">Press</a></li>
+                    <li><a class="parents" href="#">Leadership</a></li>
+                    <li><a class="parents" href="#">Social Impact</a></li>
                 </ul>
             </div>
             <div class="navbar">
-                <div class="pe-3">
-                    Follow us
+                <div class="pe-3 menu pe-2">
+                     Follow us <i class="fa-solid fa-arrow-down"></i>
+                    <ul class="dropdown">
+                        <li><a href="#">Blog <i class="fa-solid fa-share-from-square"></i></a></li>
+                        <li><a href="#">Podcast<i style="padding-left: 5px;" class="fa-solid fa-share-from-square"></i></a></li>
+                        <li><a href="#">Newsletter<i style="padding-left: 5px;" class="fa-solid fa-share-from-square"></i></a></li>
+                    </ul>
                 </div>
                 <button class="btn btn-primary shadow" type="button">Contact</button>
             </div>
@@ -115,10 +166,12 @@
                     </p>
                 </div>
                 <div class="ms-5">
-                    <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">SelesForce Aminstrator / Developer</a>
+                    <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">SelesForce Aminstrator /
+                        Developer</a>
                     <div class="text-muted mt-1" style="font-size: 13px;">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span class="pe-3">US-Remote</span><span class="rounded-5 p-1" style="background-color: #f1f2f3;">PH26011</span>
+                        <span class="pe-3">US-Remote</span><span class="rounded-5 p-1"
+                            style="background-color: #f1f2f3;">PH26011</span>
                     </div>
                 </div>
             </div>
@@ -135,17 +188,21 @@
                 </div>
                 <div class="ms-5">
                     <div>
-                        <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">Senior Sales Engineer, Teams</a>
+                        <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">Senior Sales Engineer,
+                            Teams</a>
                         <div class="text-muted" style="font-size: 13px;">
                             <i class="fa-solid fa-location-dot"></i>
-                            <span class="pe-3">US - Remote</span><span class="rounded-5 p-1" style="background-color: #f1f2f3;">RH25076</span>
+                            <span class="pe-3">US - Remote</span><span class="rounded-5 p-1"
+                                style="background-color: #f1f2f3;">RH25076</span>
                         </div>
                     </div>
                     <div class="text-muted mt-4">
-                        <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">Technical Sales Enablement Manager</a>
+                        <a class="text-decoration-none fs-5" style="font-weight: bold;" href="#">Technical Sales
+                            Enablement Manager</a>
                         <div style="font-size: 13px;" class="text-muted">
                             <i class="fa-solid fa-location-dot"></i>
-                            <span class="pe-3">US - Remote</span><span class="rounded-5 p-1" style="background-color: #f1f2f3;">PH26006</span>
+                            <span class="pe-3">US - Remote</span><span class="rounded-5 p-1"
+                                style="background-color: #f1f2f3;">PH26006</span>
                         </div>
                     </div>
                 </div>

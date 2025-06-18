@@ -109,7 +109,7 @@ const questionData = [
     answers: 3,
     views: 95,
   },
-];;
+];
 
 function renderQuestion(data) {
   const question = document.getElementById("question-list");
@@ -158,9 +158,9 @@ function renderQuestion(data) {
                                               data.author
                                             }</span>
                                         </a>
-                                        <a href="#" class="text-muted ms-1">
-                                            <time>${data.time}</time>
-                                        </a>
+                                            <time class="text-muted ms-1">${
+                                              data.time
+                                            }</time>
                                     </div>
                                 </div>
                             </div>`;
@@ -176,8 +176,17 @@ questionData.reverse().forEach((element) => {
 // đếm số lượng câu hỏi
 function countQuestions() {
   const questionList = document.querySelectorAll(".question-card");
+
+  let cnt = 0;
+  questionList.forEach((q)=>
+  {
+    if(!q.classList.contains("d-none")) 
+      {
+        cnt++;
+      }   
+  });
   const countElement = document.getElementById("quantity-questions");
-  countElement.textContent = questionList.length + " questions";
+  countElement.textContent = cnt + " questions";
 }
 
 // Hiển thị form
@@ -191,7 +200,7 @@ function hideForm() {
   document.getElementById("ask-question-form").classList.remove("d-block");
   document.getElementById("ask-question-form").classList.toggle("d-none");
   document.getElementById("ask-btn-form").classList.remove("d-none");
-};
+}
 
 // Hiển thị form hỏi câu hỏi khi click vào nút "Ask a question"
 document.getElementById("ask-btn-form").addEventListener("click", function () {
@@ -246,7 +255,12 @@ function showToast(text, type) {
 
   toastBody.textContent = text;
 
-  toastElement.classList.remove("text-bg-success", "text-bg-danger", "text-bg-warning", "text-bg-primary")
+  toastElement.classList.remove(
+    "text-bg-success",
+    "text-bg-danger",
+    "text-bg-warning",
+    "text-bg-primary"
+  );
 
   switch (type) {
     case "success":
@@ -277,4 +291,33 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
       showToast("Chức năng đang cập nhật", "primary");
     }
   });
+});
+
+document.getElementById("form-search").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const questionCard = document.querySelectorAll(".question-card");
+  const searchContent = document
+    .getElementById("search-input")
+    .value.trim()
+    .toLowerCase();
+
+  let found = false;
+  questionCard.forEach((q) => {
+    const questionTitle = q
+      .querySelector(".question-title")
+      .textContent.toLowerCase();
+    if (!questionTitle.includes(searchContent)) {
+      q.classList.add("d-none");
+    } else {
+      found = true;
+      q.classList.remove("d-none");
+    }
+
+    
+  });
+  countQuestions();
+  if (!found) { 
+      showToast("Không tìm thấy câu hỏi phù hợp!", "warning");
+    }
 });

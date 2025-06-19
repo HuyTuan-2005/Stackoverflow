@@ -111,19 +111,28 @@ aside{
 
 .left-sidebar-list ul li:hover{
   background-color: #f9fafa;
-  color: #0c0d0e;
+
   font-weight: 700;
 }
+
 .left-sidebar-list ul li a{
   color: #384045;
   padding-left: 10px;
 }
+
 .left-sidebar-list ul li i{
   width: 28px;
-  display: inline-block;
   text-align: center;
   padding-left: 10px;
 }
+.nav-link:hover{
+  
+  color: #0c0d0e;
+}
+.nav-link{
+  display: inline;
+}
+
 .tag-list{
   margin: 0px;
 }

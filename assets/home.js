@@ -89,8 +89,7 @@ const questionData = [
   },
   {
     title: "Làm sao để validate form bằng JavaScript?",
-    description:
-      "Tôi muốn kiểm tra các trường trong form trước khi gửi. Có nên dùng HTML5 hay viết JS riêng?",
+    description:"Tôi muốn kiểm tra các trường trong form trước khi gửi. Có nên dùng HTML5 hay viết JS riêng?",
     tags: ["JavaScript", "Form Validation", "UX"],
     author: "Võ Duy Khang",
     time: "8 giờ trước",
@@ -178,12 +177,10 @@ function countQuestions() {
   const questionList = document.querySelectorAll(".question-card");
 
   let cnt = 0;
-  questionList.forEach((q)=>
-  {
-    if(!q.classList.contains("d-none")) 
-      {
-        cnt++;
-      }   
+  questionList.forEach((q) => {
+    if (!q.classList.contains("d-none")) {
+      cnt++;
+    }
   });
   const countElement = document.getElementById("quantity-questions");
   countElement.textContent = cnt + " questions";
@@ -312,12 +309,11 @@ document.getElementById("form-search").addEventListener("submit", function (e) {
     } else {
       found = true;
       q.classList.remove("d-none");
-    }
-
-    
+    }  
   });
+
   countQuestions();
-  if (!found) { 
-      showToast("Không tìm thấy câu hỏi phù hợp!", "warning");
-    }
+  if (!found) {
+    showToast("Không tìm thấy câu hỏi phù hợp!", "warning");
+  }
 });
